@@ -1,0 +1,35 @@
+<div class="overlay">
+    <div class="poziv-container">
+        <h1 class="pozivatelj">Pero Perić</h1>
+        <p style="color: white">Mobitel</p>
+        <div class="slide-container">
+            <div>
+                <div 
+                cdkDropList
+                #startList="cdkDropList"
+                [cdkDropListConnectedTo]="[stopList]"
+                (cdkDropListDropped)="drop($event)"
+                [cdkDropListData]="start">
+                <div  *ngFor="let item of start" cdkDrag cdkDragBoundary=".slide-container">
+                    <button mat-fab style="transform: scale(0.9); background-color: rgb(87, 202, 106);" >
+                        <mat-icon>{{item}}</mat-icon>
+                    </button>
+                </div>
+            </div>
+            </div>
+            
+            <span style="color: grey; position: absolute; right: 100px;">Povuci za javljanje</span>
+            <div>
+                <div 
+                    style="width: 55px; height: 55px;"
+                    cdkDropList
+                    #stopList="cdkDropList"
+                    [cdkDropListData]="stop"
+                    [cdkDropListConnectedTo]="[startList]"
+                    (cdkDropListDropped)="drop($event)">
+                </div>
+            </div>
+            
+        </div>
+    </div>  
+</div>

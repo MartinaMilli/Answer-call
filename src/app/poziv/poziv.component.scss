@@ -1,0 +1,28 @@
+.poziv-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pozivatelj {
+    color: white;
+    margin-top: 70px;
+}
+
+.slide-container {
+    margin-top: 270px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8018557764902836) 47%, rgba(159,159,159,1) 100%, rgba(0,0,0,0.14639359161633403) 100%);
+    width: 80%;
+    max-width: 280px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+  }
+
